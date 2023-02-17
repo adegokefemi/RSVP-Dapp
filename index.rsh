@@ -31,9 +31,9 @@ export const main = Reach.App(() => {
 
   commit();
 
-  // each([Buyer, Seller], () => {
-  //   const x = declassify(interact.wantsRSVPecho(wantedRSVP))
-  // })
+  each([Buyer, Seller], () => {
+    const x = declassify(interact.wantsRSVPecho(wantedRSVP))
+  })
 
   Seller.only(() => {
     const currTokenCost = declassify(interact.tokenCost());
